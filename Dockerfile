@@ -1,0 +1,23 @@
+FROM ruby:2.4.2
+
+RUN apt-get update && \
+    apt-get install -qq -y openssh-client build-essential apt-utils libcurl4-openssl-dev libssl-dev --fix-missing --no-install-recommends && \
+    echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
+    (curl -sS https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -) && \
+    apt-get update && apt-get install -y libpq-dev postgresql-client-9.6 --no-install-recommends && rm -rf /var/lib/apt/lists/*
+
+COPY Gemfile* /tmp/
+WORKDIR /tmp
+RUN bundle install --without development test --jobs 4 --retry 3
+
+ENV INSTALL_PATH /app
+
+RUN mkdir -p $INSTALL_PATH
+WORKDIR $INSTALL_PATH
+VOLUME ["$INSTALL_PATH"]
+
+COPY . .
+
+RUN chmod +x ./bin/entrypoint.sh
+
+ENTRYPOINT ./bin/entrypoint.sh

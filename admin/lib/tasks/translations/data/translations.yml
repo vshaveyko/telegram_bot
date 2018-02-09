@@ -1,0 +1,48 @@
+-
+  text_alias: 'quest.presenter.all_busy{current_date}'
+  ru: 'На {{ current_date }} все занято'
+-
+  text_alias: 'quest.presenter.ppl_range{ppl_min}{ppl_max}'
+  ru: '{{ ppl_min }} - {{ ppl_max }} человек'
+-
+  text_alias: 'quest.presenter.cost_range{cost_min}{cost_max}'
+  ru: 'От {{cost_min}} до {{cost_max}} грн за игру'
+-
+  text_alias: 'message.closest_quest.looking_near'
+  ru: 'Ищу квесты рядом...'
+-
+  text_alias: 'quest.presenter.description{quest_name}{quest_ppl_range}{quest_description_text}{quest_location_info}{video_url}'
+  ru: "*{{quest_name}}*, {{quest_ppl_range}}\n{{ quest_description_text}\n{{quest_location_info}}\n{{ video_url }}"
+-
+  text_alias: 'quest.presenter.img_caption{quest_name}{quest_ppl_range}{quest_description_text}{quest_location_info}{video_url}'
+  ru: '*{{quest_name}}*, {{quest_ppl_range}}'
+-
+  text_alias: 'quest_location.presenter.contacts_info{quest_location_name}{phone_number}'
+  ru: "*{{quest_location_name}}*\n{{ phone_number }}"
+-
+  text_alias: 'quest_description.button.edit_name'
+  ru: "Описание"
+-
+  text_alias: 'quest_location.presenter.info_message_standard'
+  ru: "Если вам понравилась комната, узнать больше о ней и забронировать вы можете по телефону"
+-
+  text_alias: 'quest_location.presenter.info_message_light'
+  ru: "Узнать занятость и забронировать игру можно по телефону"
+-
+  text_alias: 'quest_location.presenter.info_message_vip'
+  ru: "Если вам понравилась комната, забронировать ее вы можете по телефону или через бот"
+-
+  text_alias: 'button.comments'
+  ru: "Отзывы"
+-
+  text_alias: 'buttons.more_comment'
+  ru: "Еще отзыв"
+-
+  text_alias: 'buttons.schedule'
+  ru: "Расписание"
+-
+  text_alias: 'buttons.book!'
+  ru: "Бронировать"
+-
+  text_alias: 'buttons.cost'
+  ru: "Стоимость"

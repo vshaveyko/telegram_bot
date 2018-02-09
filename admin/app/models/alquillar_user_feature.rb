@@ -1,0 +1,2 @@
+class AlquillarUserFeature < ApplicationRecord
+end

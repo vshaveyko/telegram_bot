@@ -1,0 +1,5 @@
+{
+  "name": "skip-system-test",
+  "private": true,
+  "dependencies": {}
+}

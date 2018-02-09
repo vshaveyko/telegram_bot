@@ -1,0 +1,2 @@
+class AlquillarUser < ApplicationRecord
+end
